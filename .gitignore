@@ -1,0 +1,11 @@
+# Ignora node_modules
+node_modules/
+
+# Ignora la cartella dist (se non vuoi includerla)
+dist/
+
+# Ignora file di ambiente
+.env
+
+# Ignora file di sistema
+.DS_Store

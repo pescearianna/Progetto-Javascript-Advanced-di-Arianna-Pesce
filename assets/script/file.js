@@ -1,5 +1,4 @@
 
-
 async function initializeNewStories() {
 const response = await fetch('https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty');
 const data = await response.json();
@@ -83,3 +82,6 @@ loadMore.addEventListener('click', function() {
     showed += 10;
     tennews();
 })
+
+
+
