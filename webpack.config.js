@@ -29,8 +29,11 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i, // Aggiungi 'ico' per gestire il favicon
-        type: 'asset/resource'
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i, 
+        type: 'asset/resource',
+        generator: {
+            filename: 'assets/img/[name][ext]' // Percorso di output per le immagini
+          }
       }
     ]
   }
