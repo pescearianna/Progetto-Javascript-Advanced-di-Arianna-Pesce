@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=document.querySelector(".date"),t=(new Date).toLocaleDateString("en-us",{weekday:"long",year:"numeric",month:"short",day:"numeric"});e.innerHTML=`Last update: ${t}`;const c=document.querySelector("#close"),n=document.querySelector(".publi-big");c.onclick=()=>{n.classList.add("hidden")}})();
