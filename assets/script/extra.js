@@ -1,3 +1,5 @@
+import '../CSS/styles.css'
+
 const dateToday = document.querySelector('.date')
 
 const numberDate = new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"})
