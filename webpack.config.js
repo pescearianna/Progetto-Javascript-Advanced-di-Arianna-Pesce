@@ -1,48 +1,6 @@
-// const path = require('path');
-// const HtmlWebpackplugin = require('html-webpack-plugin')
-
-// module.exports = {
-//     entry: {
-//         index: './assets/script/file.js'
-//     },
-//     output:{
-//         path: path.resolve(__dirname, 'dist'),
-//         filename: 'bundle.js'
-//     },
-//     module: {
-//         rules:[
-//             {
-//                 test: /\.css$/i,
-//                 use: ['style-loader', 'css-loader']
-//             },
-//             {
-//                 test: /\.js$/i,
-//                 exclude:/node_modules/,
-//                 use: {
-//                     loader: 'babel-loader',
-//                     options:{
-//                         presets:['@babel/preset-env']
-//                     }
-//                 }
-//             }
-//         ]
-//     },
-//     plugins: [
-//         new HtmlWebpackplugin({
-//             title: 'Applicazione webpack',
-//             template: './index.hmtl'
-//         })
-//     ],
-//     devServer:{
-//         port: 5000,
-//         open: true,
-//         static: path.resolve(__dirname, 'dist')
-//     },
-//     mode: 'development'
-// }
-
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: {
@@ -51,22 +9,27 @@ module.exports = {
   },
   output: {
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'img/[name][ext]' // Percorso di output per le immagini
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: './index.html', // Usa il tuo file index.html come template
-      filename: 'index.html' // Nome del file generato
+      filename: 'index.html', // Nome del file generato
+      favicon: './assets/img/favicon.jpg' // Percorso del favicon
+    }),
+    new MiniCssExtractPlugin({
+      filename: 'styles.css' // Nome del file CSS generato
     })
   ],
   module: {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|ico)$/i, // Aggiungi 'ico' per gestire il favicon
         type: 'asset/resource'
       }
     ]
