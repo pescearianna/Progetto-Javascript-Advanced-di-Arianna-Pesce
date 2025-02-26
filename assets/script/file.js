@@ -1,22 +1,27 @@
 
-async function initializeNewStories() {
-const response = await fetch('https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty');
-const data = await response.json();
-return data; //array di news 500
-}
+import get from 'lodash/get';
+import axios from 'axios';
 
+
+async function initializeNewStories() {
+  const response = await axios.get('https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty');
+  return response.data;
+}
 
 async function shownews(Idnew) {
-    const response = await fetch("https://hacker-news.firebaseio.com/v0/item/" + Idnew + ".json");
-    const data = await response.json();
-    return data;
+  const response = await axios.get(`https://hacker-news.firebaseio.com/v0/item/${Idnew}.json`);
+  return response.data;
 }
+
 
 let listIds;
 
 let showedIds=[];
 let showed = 0;
 let container = document.querySelector('.container');
+
+
+
 
 function tennews() {
     for (let i=showed; i < (showed + 10); i++){
@@ -30,12 +35,17 @@ function tennews() {
             newsBox.classList.add('news');
 
                 let titleNews = document.createElement('h3');
-                titleNews.textContent = `${data.title}`;
+                
+
+                titleNews.textContent = get(data, 'title', 'No title available. Sorry for the inconvenient.');
+                
 
                 let authorPar = document.createElement("p");
-                authorPar.textContent = `Author: ${data.by}`;
+          
+                authorPar.textContent = `Author: ${get(data, 'by', 'Unknown')}`;
 
-                let unix_time = data.time;
+
+                let unix_time = get(data, 'time', '-')
                 let timeNews = new Date(unix_time * 1000);
                 function formatDate(date) {
                     const options = { day: '2-digit', month: 'short', year: 'numeric' };
