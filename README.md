@@ -24,7 +24,7 @@
 **HACKnews** is a web app that gathers the latest tech news using the Hacker News API. Developed by Arianna Pesce as part of the Front-End Development course at start2impact University.
 
 Visit the site:
-![HACKnews Website](https://hecknews-arianna-pesce.web.app/)
+[HACKnews Website](https://hecknews-arianna-pesce.web.app/)
 
 ---  
 
