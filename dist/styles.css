@@ -156,7 +156,6 @@ h2{
     text-decoration: none;
     color: black;
     border-radius: 10px;
-  
     border: 2px solid rgb(117, 117, 117);
     transition: border;
    
@@ -192,7 +191,9 @@ h2{
 }
 
 .right{
-    float:right;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem
 }
 
 
@@ -265,6 +266,7 @@ h2{
     }
     .news{
         width: 100%;
+        min-height: 300px;
     }
     #publi-ban-img{
         display: none;
@@ -280,6 +282,7 @@ h2{
 @media screen and (min-width: 640px) and (max-width: 1024px){
     .news{
         width: 100%;
+    
     }
 
     main{
