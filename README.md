@@ -1,5 +1,4 @@
 <div align='center'>
-    <img src="./assets/img/zombie.png" alt="The Laser Space Game" style='margin: 20px auto; width:200px'>
         <h1>HACKnews | A Javascript project</h1>   
 </div>
 
@@ -17,7 +16,6 @@
 ![screenshot](./assets/img/Hacknews-screen-d.JPG)
 
 <br>
-<br>
 
 # The Laser Space Game
 
@@ -26,7 +24,7 @@
 **HACKnews** is a web app that gathers the latest tech news using the Hacker News API. Developed by Arianna Pesce as part of the Front-End Development course at start2impact University.
 
 Visit the site:
-![HACKnews Website](https://hecknews-arianna-pesce.web.app/)
+[HACKnews Website](https://hecknews-arianna-pesce.web.app/)
 
 ---  
 
