@@ -1,8 +1,13 @@
-# Ignora node_modules
+
 node_modules/
 
-# Ignora file di ambiente
+
 .env
 
-# Ignora file di sistema
+
 .DS_Store
+
+# Configurazioni locali di Firebase CLI
+.firebase/
+firebase-debug.log
+
