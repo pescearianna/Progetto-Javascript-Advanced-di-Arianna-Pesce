@@ -1,5 +1,4 @@
 <div align='center'>
-    <img src="./assets/img/zombie.png" alt="The Laser Space Game" style='margin: 20px auto; width:200px'>
         <h1>HACKnews | A Javascript project</h1>   
 </div>
 
@@ -16,7 +15,6 @@
 
 ![screenshot](./assets/img/Hacknews-screen-d.JPG)
 
-<br>
 <br>
 
 # The Laser Space Game
