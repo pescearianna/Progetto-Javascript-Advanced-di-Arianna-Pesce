@@ -8,6 +8,5 @@ node_modules/
 .DS_Store
 
 # Configurazioni locali di Firebase CLI
-.firebase/
-firebase-debug.log
+.firebase
 
