@@ -17,7 +17,7 @@
 
 <br>
 
-# The Laser Space Game
+# Hacknews App
 
 ## Description  
 
